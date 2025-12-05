@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFisioterapia | Atendimento Domiciliar de Excelência</title>
+    <meta name="description" content="Fisioterapia domiciliar premium com atendimento humanizado e personalizado. Cuidado especializado no conforto do seu lar.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor follower -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 5C13.954 5 5 13.954 5 25s8.954 20 20 20c5.523 0 10-4.477 10-10s-4.477-10-10-10c-2.761 0-5 2.239-5 5s2.239 5 5 5" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="logo-g"/>
+                    <circle cx="38" cy="12" r="5" fill="#7BA393" class="logo-dot"/>
+                    <text x="50" y="35" font-family="Outfit" font-weight="500" font-size="18" fill="currentColor">GO</text>
+                </svg>
+            </a>
+            <div class="nav-links">
+                <a href="#sobre" class="nav-link" data-hover="Sobre">Sobre</a>
+                <a href="#servicos" class="nav-link" data-hover="Serviços">Serviços</a>
+                <a href="#diferenciais" class="nav-link" data-hover="Diferenciais">Diferenciais</a>
+                <a href="#depoimentos" class="nav-link" data-hover="Depoimentos">Depoimentos</a>
+                <a href="#contato" class="nav-link nav-link-cta">Agendar Consulta</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#sobre" class="mobile-link">Sobre</a>
+            <a href="#servicos" class="mobile-link">Serviços</a>
+            <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+            <a href="#contato" class="mobile-link mobile-link-cta">Agendar Consulta</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag reveal">
+                    <span class="tag-line"></span>
+                    <span>Fisioterapia Domiciliar Premium</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line reveal-delay-1">Cuidado que</span>
+                    <span class="title-line title-highlight reveal-delay-2">transforma</span>
+                    <span class="title-line reveal-delay-3">no conforto do</span>
+                    <span class="title-line reveal-delay-4">seu lar</span>
+                </h1>
+                <p class="hero-subtitle reveal-delay-5">
+                    Atendimento fisioterapêutico de excelência, com abordagem humanizada 
+                    e personalizada. Levamos expertise e dedicação até você.
+                </p>
+                <div class="hero-cta reveal-delay-6">
+                    <a href="#contato" class="btn btn-primary">
+                        <span>Agende sua avaliação</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#sobre" class="btn btn-ghost">
+                        <span>Conheça nossa história</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual reveal-delay-3">
+                <div class="hero-images">
+                    <!-- Main Image -->
+                    <div class="hero-image hero-image-main">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=750&fit=crop" alt="Fisioterapeuta em atendimento domiciliar">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <!-- Secondary Image -->
+                    <div class="hero-image hero-image-secondary">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Cuidado humanizado">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <!-- Accent Image -->
+                    <div class="hero-image hero-image-accent">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=300&h=400&fit=crop" alt="Reabilitação">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <!-- Floating Elements -->
+                <div class="hero-float-elements">
+                    <div class="float-card float-card-1">
+                        <div class="float-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <div class="float-text">
+                            <strong>2.500+</strong>
+                            <span>Pacientes atendidos</span>
+                        </div>
+                    </div>
+                    <div class="float-card float-card-2">
+                        <div class="float-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <path d="M22 4L12 14.01l-3-3"/>
+                            </svg>
+                        </div>
+                        <div class="float-text">
+                            <strong>98%</strong>
+                            <span>Satisfação</span>
+                        </div>
+                    </div>
+                    <div class="float-badge">
+                        <span>15 anos</span>
+                        <small>de experiência</small>
+                    </div>
+                </div>
+                <!-- Decorative shapes -->
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+        <div class="hero-decoration">
+            <div class="deco-circle deco-circle-1"></div>
+            <div class="deco-circle deco-circle-2"></div>
+            <div class="deco-line deco-line-1"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-image-wrapper reveal-left">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=800&fit=crop" alt="Fisioterapeuta em atendimento">
+                        </div>
+                        <div class="about-image-accent"></div>
+                    </div>
+                    <div class="about-stats reveal-up">
+                        <div class="stat">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label">Anos de<br>experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="2500">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Pacientes<br>atendidos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag reveal">Sobre Nós</span>
+                    <h2 class="section-title reveal-delay-1">
+                        Excelência em cada <em>detalhe</em>, cuidado em cada <em>gesto</em>
+                    </h2>
+                    <div class="about-text reveal-delay-2">
+                        <p>
+                            A <strong>GoFisioterapia</strong> nasceu da paixão por proporcionar um atendimento 
+                            verdadeiramente diferenciado. Acreditamos que a recuperação vai além de técnicas 
+                            — envolve acolhimento, compreensão e um olhar atento às necessidades únicas de cada paciente.
+                        </p>
+                        <p>
+                            Nossa equipe é formada por profissionais altamente qualificados, com especializações 
+                            em diversas áreas da fisioterapia, que levam até o seu lar toda a estrutura e 
+                            expertise necessárias para um tratamento de excelência.
+                        </p>
+                    </div>
+                    <div class="about-values reveal-delay-3">
+                        <div class="value">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <span>Humanização</span>
+                        </div>
+                        <div class="value">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span>Excelência</span>
+                        </div>
+                        <div class="value">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <span>Pontualidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="servicos">
+        <div class="services-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Nossos Serviços</span>
+                <h2 class="section-title reveal-delay-1">
+                    Especialidades que <em>cuidam</em> de você
+                </h2>
+                <p class="section-subtitle reveal-delay-2">
+                    Oferecemos uma gama completa de serviços fisioterapêuticos, 
+                    todos realizados no conforto e segurança do seu lar.
+                </p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card reveal-up" style="--delay: 0.1s">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M32 32v16M26 42l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fisioterapia Ortopédica</h3>
+                    <p class="service-desc">
+                        Tratamento especializado para lesões musculoesqueléticas, 
+                        pós-operatórios ortopédicos e reabilitação de fraturas.
+                    </p>
+                    <ul class="service-features">
+                        <li>Reabilitação pós-cirúrgica</li>
+                        <li>Tratamento de dores crônicas</li>
+                        <li>Recuperação de lesões esportivas</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal-up" style="--delay: 0.2s">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 8v48M16 24l16-8 16 8M16 40l16 8 16-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="32" cy="32" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fisioterapia Neurológica</h3>
+                    <p class="service-desc">
+                        Reabilitação especializada para pacientes com condições 
+                        neurológicas, promovendo independência e qualidade de vida.
+                    </p>
+                    <ul class="service-features">
+                        <li>Recuperação pós-AVC</li>
+                        <li>Doença de Parkinson</li>
+                        <li>Esclerose múltipla</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal-up" style="--delay: 0.3s">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M20 32c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 32c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                            <path d="M32 32v12M28 40h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="32" cy="52" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fisioterapia Respiratória</h3>
+                    <p class="service-desc">
+                        Técnicas avançadas para otimizar a função pulmonar 
+                        e melhorar a capacidade respiratória.
+                    </p>
+                    <ul class="service-features">
+                        <li>Doenças respiratórias crônicas</li>
+                        <li>Recuperação pós-COVID</li>
+                        <li>Preparo pré e pós-operatório</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal-up" style="--delay: 0.4s">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M22 28h20M32 28v20M24 48h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M26 36l-6 12M38 36l6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fisioterapia Geriátrica</h3>
+                    <p class="service-desc">
+                        Cuidados especializados para a terceira idade, 
+                        focando em mobilidade, equilíbrio e prevenção de quedas.
+                    </p>
+                    <ul class="service-features">
+                        <li>Prevenção de quedas</li>
+                        <li>Fortalecimento muscular</li>
+                        <li>Manutenção da independência</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal-up" style="--delay: 0.5s">
+                    <div class="service-number">05</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <ellipse cx="32" cy="24" rx="16" ry="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 24v16c0 4.418 7.163 8 16 8s16-3.582 16-8V24" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 32v8M28 36h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Pilates Terapêutico</h3>
+                    <p class="service-desc">
+                        Método Pilates adaptado para reabilitação, 
+                        fortalecimento do core e melhora postural.
+                    </p>
+                    <ul class="service-features">
+                        <li>Correção postural</li>
+                        <li>Fortalecimento global</li>
+                        <li>Flexibilidade e equilíbrio</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal-up" style="--delay: 0.6s">
+                    <div class="service-number">06</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 16c-8 0-16 8-16 20s8 12 16 12 16 0 16-12-8-20-16-20z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M26 32c0 3.314 2.686 6 6 6s6-2.686 6-6" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="26" cy="28" r="2" fill="currentColor"/>
+                            <circle cx="38" cy="28" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Fisioterapia Pediátrica</h3>
+                    <p class="service-desc">
+                        Atendimento especializado e lúdico para crianças, 
+                        promovendo desenvolvimento motor adequado.
+                    </p>
+                    <ul class="service-features">
+                        <li>Atrasos no desenvolvimento</li>
+                        <li>Paralisia cerebral</li>
+                        <li>Doenças neuromusculares</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section class="differentials section" id="diferenciais">
+        <div class="container">
+            <div class="diff-header">
+                <span class="section-tag reveal">Por que nos escolher</span>
+                <h2 class="section-title reveal-delay-1">
+                    A diferença está nos <em>detalhes</em>
+                </h2>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-item reveal-up" style="--delay: 0.1s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4l4 8 8 1-6 5 2 8-8-4-8 4 2-8-6-5 8-1z"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Profissionais de Elite</h3>
+                        <p>Equipe com formação nas melhores instituições e especializações em diversas áreas da fisioterapia.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal-up" style="--delay: 0.2s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="24" cy="24" r="18"/>
+                            <path d="M24 12v12l8 4"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Pontualidade Garantida</h3>
+                        <p>Respeitamos seu tempo. Nossos profissionais chegam no horário combinado, sempre.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal-up" style="--delay: 0.3s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 24c0-11.046 8.954-20 20-20s20 8.954 20 20"/>
+                            <path d="M14 24c0-5.523 4.477-10 10-10s10 4.477 10 10"/>
+                            <circle cx="24" cy="24" r="3"/>
+                            <path d="M24 27v12"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Equipamentos Premium</h3>
+                        <p>Levamos todos os equipamentos necessários para um atendimento completo e de alta qualidade.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal-up" style="--delay: 0.4s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4v8M4 24h8M24 36v8M36 24h8"/>
+                            <circle cx="24" cy="24" r="8"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Cada plano de tratamento é único, desenvolvido especificamente para suas necessidades.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal-up" style="--delay: 0.5s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 40l8-8m0 0l8-16 8 16m-16 0h16"/>
+                            <circle cx="36" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Acompanhamento Digital</h3>
+                        <p>Relatórios detalhados de evolução e acesso a exercícios personalizados pelo aplicativo.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal-up" style="--delay: 0.6s">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M24 4c-8 0-14 6-14 14 0 10 14 22 14 22s14-12 14-22c0-8-6-14-14-14z"/>
+                            <circle cx="24" cy="18" r="5"/>
+                        </svg>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Cobertura Ampla</h3>
+                        <p>Atendemos em toda a região metropolitana, levando cuidado de qualidade até você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Como Funciona</span>
+                <h2 class="section-title reveal-delay-1">
+                    Sua jornada de <em>recuperação</em>
+                </h2>
+            </div>
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                <div class="process-step reveal-up" style="--delay: 0.1s">
+                    <div class="step-marker">
+                        <span>1</span>
+                    </div>
+                    <div class="step-content">
+                        <h3>Primeiro Contato</h3>
+                        <p>Entre em contato pelo WhatsApp ou formulário. Nossa equipe responde em até 2 horas.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="--delay: 0.2s">
+                    <div class="step-marker">
+                        <span>2</span>
+                    </div>
+                    <div class="step-content">
+                        <h3>Avaliação Inicial</h3>
+                        <p>Agendamos uma avaliação completa no conforto da sua casa para entender suas necessidades.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="--delay: 0.3s">
+                    <div class="step-marker">
+                        <span>3</span>
+                    </div>
+                    <div class="step-content">
+                        <h3>Plano Personalizado</h3>
+                        <p>Desenvolvemos um plano de tratamento exclusivo, com objetivos claros e mensuráveis.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal-up" style="--delay: 0.4s">
+                    <div class="step-marker">
+                        <span>4</span>
+                    </div>
+                    <div class="step-content">
+                        <h3>Início do Tratamento</h3>
+                        <p>Sessões regulares com acompanhamento contínuo da sua evolução.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="depoimentos">
+        <div class="testimonials-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Depoimentos</span>
+                <h2 class="section-title reveal-delay-1">
+                    O que nossos <em>pacientes</em> dizem
+                </h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Após minha cirurgia de joelho, a GoFisioterapia foi fundamental para minha recuperação. 
+                            O atendimento domiciliar me proporcionou conforto e praticidade, e os resultados superaram 
+                            minhas expectativas. Profissionais excepcionais!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Ricardo Mendes">
+                            </div>
+                            <div class="author-info">
+                                <strong>Ricardo Mendes</strong>
+                                <span>Empresário • Jardins</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Minha mãe de 82 anos recuperou a mobilidade e a confiança graças ao trabalho dedicado 
+                            da equipe. O cuidado humanizado fez toda a diferença. Ela sempre espera ansiosamente 
+                            pelas sessões. Recomendo de olhos fechados!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Marina Castilho">
+                            </div>
+                            <div class="author-info">
+                                <strong>Marina Castilho</strong>
+                                <span>Advogada • Moema</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.5 6h6.5l-5 4 2 6.5-6-4-6 4 2-6.5-5-4h6.5z"/></svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Como atleta, precisava de um acompanhamento preciso e profissional. A GoFisioterapia 
+                            entregou muito mais do que esperava. Voltei a competir em tempo recorde e com total 
+                            segurança. Atendimento de primeiro mundo!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Fernando Alves">
+                            </div>
+                            <div class="author-info">
+                                <strong>Fernando Alves</strong>
+                                <span>Atleta Profissional • Itaim Bibi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn testimonial-prev" id="testimonial-prev" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots">
+                        <button class="dot active" data-index="0" aria-label="Depoimento 1"></button>
+                        <button class="dot" data-index="1" aria-label="Depoimento 2"></button>
+                        <button class="dot" data-index="2" aria-label="Depoimento 3"></button>
+                    </div>
+                    <button class="testimonial-btn testimonial-next" id="testimonial-next" aria-label="Próximo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section" id="contato">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+            <div class="cta-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <span class="section-tag reveal">Comece Agora</span>
+                <h2 class="cta-title reveal-delay-1">
+                    Pronto para transformar sua <em>qualidade de vida</em>?
+                </h2>
+                <p class="cta-subtitle reveal-delay-2">
+                    Agende uma avaliação gratuita e descubra como podemos ajudá-lo 
+                    a alcançar seus objetivos de saúde e bem-estar.
+                </p>
+                <div class="cta-actions reveal-delay-3">
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Falar pelo WhatsApp</span>
+                    </a>
+                    <a href="tel:+5511999999999" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                        <span>Ligar Agora</span>
+                    </a>
+                </div>
+                <div class="cta-info reveal-delay-4">
+                    <div class="info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        <span>Resposta em até 2h</span>
+                    </div>
+                    <div class="info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span>Avaliação gratuita</span>
+                    </div>
+                    <div class="info-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <path d="M22 4L12 14.01l-3-3"/>
+                        </svg>
+                        <span>Sem compromisso</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="logo-svg" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 5C13.954 5 5 13.954 5 25s8.954 20 20 20c5.523 0 10-4.477 10-10s-4.477-10-10-10c-2.761 0-5 2.239-5 5s2.239 5 5 5" stroke="currentColor" stroke-width="4" stroke-linecap="round" class="logo-g"/>
+                            <circle cx="38" cy="12" r="5" fill="#7BA393" class="logo-dot"/>
+                            <text x="50" y="35" font-family="Outfit" font-weight="500" font-size="18" fill="currentColor">GO</text>
+                            <text x="5" y="52" font-family="Outfit" font-weight="300" font-size="10" fill="#7BA393" letter-spacing="2">FISIOTERAPIA</text>
+                        </svg>
+                    </a>
+                    <p class="footer-desc">
+                        Transformando vidas através do cuidado especializado e humanizado, 
+                        no conforto do seu lar.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Fisioterapia Ortopédica</a></li>
+                        <li><a href="#servicos">Fisioterapia Neurológica</a></li>
+                        <li><a href="#servicos">Fisioterapia Respiratória</a></li>
+                        <li><a href="#servicos">Fisioterapia Geriátrica</a></li>
+                        <li><a href="#servicos">Pilates Terapêutico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <span>(11) 99999-9999</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            <span>contato@gofisioterapia.com.br</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>São Paulo, SP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GoFisioterapia. Todos os direitos reservados.</p>
+                <p>CREFITO-3: XXXXX-F</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
