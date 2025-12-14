@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
  * Custom Cursor
  */
 function initCustomCursor() {
+    // Cursor personalizado desabilitado
+    return;
+    
     const cursor = document.getElementById('cursor');
     const cursorFollower = document.getElementById('cursor-follower');
     

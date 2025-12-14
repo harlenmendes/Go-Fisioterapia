@@ -45,7 +45,7 @@
     
     /* Layout */
     --container-max: 1400px;
-    --nav-height: 80px;
+    --nav-height: 100px;
 }
 
 /* ===================================
@@ -116,15 +116,15 @@ ul, ol {
 @media (hover: hover) and (pointer: fine) {
     .cursor,
     .cursor-follower {
-        display: block;
+        display: none;
     }
     
     body {
-        cursor: none;
+        cursor: auto;
     }
     
     a, button {
-        cursor: none;
+        cursor: pointer;
     }
 }
 
@@ -261,13 +261,15 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo-svg {
-    width: 100px;
-    height: 40px;
-    color: var(--color-primary);
-    transition: color var(--transition-fast);
+    width: 180px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    transition: opacity var(--transition-fast);
 }
 
 .nav-links {
@@ -1630,10 +1632,17 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer-logo .logo-svg {
-    width: 120px;
-    height: 50px;
-    color: var(--color-white);
+    width: 220px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
 }
 
 .footer-desc {
