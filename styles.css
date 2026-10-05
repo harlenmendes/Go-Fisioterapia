@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: 1.5rem;
 }
 
 .nav-link {
@@ -323,6 +323,36 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link-cta:hover {
     background-color: var(--color-primary-light);
     transform: translateY(-2px);
+}
+
+.nav-link-admin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: rgba(27, 58, 75, 0.05);
+    border: 1px solid rgba(27, 58, 75, 0.12);
+    border-radius: 100px;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nav-link-admin:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(27, 58, 75, 0.18);
+    transform: translateY(-2px);
+}
+
+.nav-link-admin .admin-icon {
+    transition: transform var(--transition-fast);
+}
+
+.nav-link-admin:hover .admin-icon {
+    transform: scale(1.1);
 }
 
 .nav-toggle {
@@ -397,6 +427,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu.active .mobile-link:nth-child(3) { transition-delay: 0.2s; }
 .mobile-menu.active .mobile-link:nth-child(4) { transition-delay: 0.25s; }
 .mobile-menu.active .mobile-link:nth-child(5) { transition-delay: 0.3s; }
+.mobile-menu.active .mobile-link:nth-child(6) { transition-delay: 0.35s; }
+.mobile-menu.active .mobile-link:nth-child(7) { transition-delay: 0.4s; }
+.mobile-menu.active .mobile-link:nth-child(8) { transition-delay: 0.45s; }
 
 .mobile-link:hover {
     color: var(--color-secondary);
@@ -411,6 +444,28 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
     border-radius: 2px;
     margin-top: var(--space-md);
+}
+
+.mobile-link-admin {
+    font-family: var(--font-body) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    background-color: rgba(27, 58, 75, 0.05);
+    border: 1px solid rgba(27, 58, 75, 0.15);
+    border-radius: 100px;
+    color: var(--color-primary) !important;
+    margin-top: 0.5rem;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast) !important;
+}
+
+.mobile-link-admin:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    border-color: var(--color-primary);
 }
 
 /* ===================================
